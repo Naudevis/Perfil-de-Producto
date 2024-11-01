@@ -1,0 +1,20 @@
+﻿<h3>Detalles de Producto</h3>
+
+@if (product != null)
+{
+    <div>
+        <h4>Id:@product.Id</h4>
+        <h4>Nombre: @product.Name</h4>
+        <h4>Precio: @product.Price</h4>
+        <h4>Descripción:@product.Description</h4>
+
+    </div>
+}
+else
+{
+    <p>No hay información del usuario disponible</p>
+
+}
+
+
+
