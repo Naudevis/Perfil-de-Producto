@@ -1,12 +1,21 @@
-﻿<h3>Detalles de Producto</h3>
-
+﻿ 
 @if (product != null)
+
 {
+    <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Detalles del Producto</div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Id:@product.Id</li>
+                <li class="list-group-item">Nombre: @product.Name</li>
+                <li class="list-group-item">Precio: @product.Price</li>
+                <li class="list-group-item">Descripción:@product.Description</li>
+            </ul>
+        </div>
+    </div>
+
     <div>
-        <h4>Id:@product.Id</h4>
-        <h4>Nombre: @product.Name</h4>
-        <h4>Precio: @product.Price</h4>
-        <h4>Descripción:@product.Description</h4>
+
 
     </div>
 }

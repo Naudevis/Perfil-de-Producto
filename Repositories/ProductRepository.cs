@@ -15,14 +15,19 @@ namespace ProductProfileExercise.Repositories
             new Product { Id = 3, Name = "Arroz", Price = 2000, Description = "2kg" }
         };
 
-        public Product GetProduct(string id)
+        public Product GetProductById(string id)
         {
             int newId = Int32.Parse(id);
             var product = products.Find(p => p.Id == newId);
-      
+
             return product;
         }
-        
+        public List<Product> GetProduct()
+        {
+            return products;
+        }
+
+
+
     }
-    
 }

@@ -12,7 +12,7 @@ namespace ProductProfileExercise.Components.Pages
         protected override void OnInitialized()
         {
 
-            product = productRepository.GetProduct(id);
+            product = productRepository.GetProductById(id);
             Console.WriteLine(product != null ? "Producto obtenido correctamente" : "No se obtuvo ningun producto");
 
 

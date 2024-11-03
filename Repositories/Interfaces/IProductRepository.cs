@@ -4,6 +4,8 @@ namespace ProductProfileExercise.Repositories.Interfaces
 {
     public interface IProductRepository
     {
-        Product GetProduct(string id);
+        Product GetProductById(string id);
+        List<Product> GetProduct();
+
     }
 }

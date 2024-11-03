@@ -1,0 +1,39 @@
+﻿@page "/productlist"
+@inject IProductRepository productRepository
+
+<h3>Lista de productos</h3>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Descripción</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (product != null)
+        {
+            @for (int i = 0; i < product.Count; i++)
+            {
+                <tr>
+                    <td>@product[i].Id</td>
+                    <td>@product[i].Name</td>
+                    <td>@product[i].Price</td>
+                    <td>@product[i].Description</td>
+                    <td><a href="productprofile/@product[i].Id/">Detalles</a></td>
+                </tr>
+
+            }
+        }
+        else
+        {
+            <tr>
+                <td>No hay productos disponibles</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
